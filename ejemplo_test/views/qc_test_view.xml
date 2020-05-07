@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record model="ir.ui.view" id="qc_test_form_view">
+        <field name="name">qc.test.form</field>
+        <field name="model">qc.test</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <label for="name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="name" class="oe_inline"/>
+                    </h1>
+					<field name="type" />
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="qc_test_tree_view">
+        <field name="name">qc.test.tree</field>
+        <field name="model">qc.test</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="name" />
+                <field name="type" />
+                <field name="company_id" />
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_qc_test">
+        <field name="name">Tests</field>
+        <field name="res_model">qc.test</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Tests"
+              parent="qc_menu_test_parent"
+              id="qc_test_menu"
+              action="action_qc_test"
+              sequence="20" />
+
+</odoo>
