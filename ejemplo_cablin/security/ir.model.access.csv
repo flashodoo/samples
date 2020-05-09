@@ -1,4 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_flash_productos,access.flash.productos,model_flash_productos,,1,1,1,1
-access_flash_ventas_facturas,access.flash.ventas.facturas,model_flash_ventas_facturas,,1,1,1,1
-access_flash_ventas_facturas_lineas,access.flash.ventas.facturas.lineas,model_flash_ventas_facturas_lineas,,1,1,1,1
