@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+        <record id="qc_test_template_category_generica" model="flash.productos">
+            <field name="name">Melones</field>
+        </record>
+
+        <record id="qc_test_template_category_referenciada" model="flash.productos">
+            <field name="name">Patatas</field>
+        </record>
+    </data>
+</odoo>
