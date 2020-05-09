@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	 <record model="ir.ui.view" id="flash_ventas_facturas_lineas_form_view">
+        <field name="name">flash.ventas.facturas.lineas.form</field>
+        <field name="model">flash.ventas.facturas.lineas</field>
+        <field name="arch" type="xml">
+            <form string="Test1">
+				<group>
+					<field name="name" class="oe_inline" />
+					<field name="precio" />
+					<field name="cantidad" />
+				</group> 
+          </form>
+        </field>
+    </record>
+		
+    <record model="ir.ui.view" id="flash_ventas_facturas_form_view">
+        <field name="name">flash.ventas.facturas.form</field>
+        <field name="model">flash.ventas.facturas</field>
+        <field name="arch" type="xml">
+            <form string="Test">
+                <sheet>
+                    <label for="seq_no" class="oe_edit_only"/>
+                    <h1>
+						<field name="seq_no" class="oe_inline" />
+                    </h1>
+					<!-- <group> -->
+						<group> 
+							<field name="type" /> 
+							<field name="active" /> 
+						</group> 
+						<!-- <group> -->
+                            <!-- <field name="category" /> -->
+                            <!-- <field name="fill_correct_values" /> -->
+                        <!-- </group> -->
+					<!-- </group> -->
+					<field name="test_lines" nolabel="1" >
+                        <tree string="Questions">
+                            <!-- <field name="sequence" widget="handle"/> -->
+                            <field name="name" />
+							<field name="cantidad" />
+                            <field name="precio" />
+							
+                            <!-- <field name="ql_values" /> -->
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="flash_ventas_facturas_tree_view">
+        <field name="name">flash.ventas.facturas.tree</field>
+        <field name="model">flash.ventas.facturas</field>
+        <field name="arch" type="xml">
+            <tree string="Tests">
+                <field name="seq_no" />
+                <!-- <field name="type" /> -->
+                <!-- <field name="company_id" /> -->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_flash_ventas_facturas">
+        <field name="name">Ventas</field>
+        <field name="res_model">flash.ventas.facturas</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Facturas"
+              parent="flash_menu_ventas"
+              id="flash_ventas_facturas"
+              action="action_flash_ventas_facturas"
+              sequence="20" />
+
+</odoo>

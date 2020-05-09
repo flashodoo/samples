@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data noupdate="1">
+        <record id="qc_test_template_category_generica" model="flash.productos">
+            <field name="name">Melones</field>
+        </record>
+
+        <record id="qc_test_template_category_referenciada" model="flash.productos">
+            <field name="name">Patatas</field>
+        </record>
+		
+		<!-- Sequences For flash.ventas.facturas (flash ventas facturas) -->
+
+		<record id="seq_student_sequence" model="ir.sequence">
+            <field name="name">sequence</field>
+            <field name="code">flash.ventas.facturas</field>
+            <field name="padding">1</field>
+            <field name="company_id" eval="False"/>
+        </record>
+    </data>
+</odoo>
