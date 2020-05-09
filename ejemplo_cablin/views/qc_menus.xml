@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- left menu main-->
+    <menuitem name="Ejemplo"
+              id="qc_menu"
+              web_icon="ejemplo_test,static/description/icon.png"
+              sequence="40"
+    />
+
+    <!-- horizontal main menu -->
+	<menuitem parent="qc_menu"
+              name="Ventas"
+              id="flash_menu_ventas"
+              sequence="2"/>
+
+</odoo>
