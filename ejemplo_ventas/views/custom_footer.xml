@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <template id="flash_report_footer" inherit_id="web.external_layout_standard">
+            <xpath expr="//div[@class='footer o_standard_footer']" position="replace">
+                <div class="footer o_standard_footer">
+                    <div class="text-center" style="border-top: 1px solid black;">
+                        <ul class="list-inline">
+                            <li>Developed By: Fox Software</li>
+                            <li>Email: info@flasof.com</li>
+                        </ul>
+                        <div t-if="report_type == 'pdf'" class="text-muted">
+                            Page: <span class="page"/> / <span class="topage"/>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>
+</odoo>

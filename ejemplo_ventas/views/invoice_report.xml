@@ -1,0 +1,30 @@
+<odoo>
+    <data>
+		
+        <!-- <report -->
+            <!-- id="action_report_flash_invoices" -->
+            <!-- model="flash.ventas.facturas" -->
+            <!-- string="Flash Facturas" -->
+            <!-- report_type="qweb-pdf" -->
+            <!-- name="flash_invoices" -->
+            <!-- file="flash_invoices" -->
+        <!-- /> -->
+
+        <!-- <template id="flash_invoices"> -->
+            <!-- <t t-call="web.html_container"> -->
+                <!-- <t t-foreach="docs" t-as="o"> -->
+                    <!-- <t t-set="lang" t-value="o.user_id.sudo().lang if o.type in ('in_invoice', 'in_refund') else o.partner_id.lang"/> -->
+                    <!-- <t t-call="flash_report_header"/> -->
+                    <!-- <t t-call="flash_report_footer"/> -->
+                <!-- </t> -->
+            <!-- </t> -->
+        <!-- </template> -->
+		
+		<!-- <menuitem name="Facturas" -->
+              <!-- parent="flash_menu_informes" -->
+              <!-- id="flash_informes_facturas" -->
+              <!-- action="action_report_flash_invoices" -->
+              <!-- sequence="20" /> -->
+			  
+    </data>
+</odoo>

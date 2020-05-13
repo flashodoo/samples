@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+	<!-- search View  -->
+    <record id="view_school_parent_search" model="ir.ui.view">
+        <field name="name">flash.clientes.search</field>
+        <field name="model">flash.clientes</field>
+        <field name="arch" type="xml">
+            <search string="Todos">
+				<!-- Crea un filtro con activos y no activos y con todos-->
+                <filter string="Activos" name="Activos1" domain="[('active', '=', True)]"/>
+				<filter string="Inactivos" name="Inactivos1" domain="[('active', '=', False)]"/>
+				<filter string="Todos" name="allx" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+            </search>
+            </field>
+    </record>
+
+    <record model="ir.ui.view" id="flash_ficheros_clientes_tree_view">
+        <field name="name">flash.clientes.tree</field>
+        <field name="model">flash.clientes</field>
+        <field name="arch" type="xml">
+			<!-- editable="bottom" hace que se pueda crear/editar desde las lineas del Tree -->
+			<!-- En este caso al no existir un form... te lo crea automaticamente -->
+            <tree string="Clientes" default_order="name" >
+                <field name="name" />
+				<field name="cPhone" />
+				<field name="cEmail" />
+                <field name="active"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_flash_ficheros_clientes">
+        <field name="name">clientes</field>
+        <field name="res_model">flash.clientes</field>
+		<!--<field name="context">{"search_default_allx":1}</field>-->
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Clientes"
+              parent="flash_menu_ficheros"
+              id="flash_ficheros_clientes_menu"
+              action="action_flash_ficheros_clientes"
+              sequence="10" />
+
+</odoo>
